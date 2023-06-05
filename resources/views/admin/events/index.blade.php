@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title','ورش العمل')
+@section('title','لوحة تحكم الإدارة')
 @section('content')
 
     <div class="container">
@@ -9,26 +9,26 @@
 
 
 
-                <a class="btn btn-outline-dark" href="{{route('events.create')}}">{{ __('Create') }}</a>
+                <a class="btn btn-outline-dark" href="{{route('admin.events.create')}}">{{ __('Create') }}</a>
 
 
 
 
-                <h1>لقائات العمل</h1>
+                <h1>{{__('Work meetings')}}</h1>
 
                 <div class="table-responsive">
                     <table class="table table-sm">
                         <thead class="col">
                         <tr class="col">
                             <th scope="col"># </th>
-                            <th scope="col"> عنوان الفعالية </th>
-                            <th scope="col">مشاهدة الزوار </th>
-                            <th scope="col">نوع الحدث</th>
-                            <th scope="col">تاريخ  ابتداء التسجيل</th>
-                            <th scope="col">تاريخ انتهاء التسجيل</th>
-                            <th scope="col">عدد الضيوف المسموح</th>
-                            <th scope="col">تعديل</th>
-                            <th scope="col">حذف</th>
+                            <th scope="col"> {{__('Title event')}} </th>
+                            <th scope="col">{{__('View guest')}} </th>
+                            <th scope="col">{{__('Event type')}}</th>
+                            <th scope="col">{{__('Registration start date')}}</th>
+                            <th scope="col">{{__('Registration end date')}}</th>
+                            <th scope="col">{{__('Number of guests allowed')}}</th>
+                            <th scope="col">{{ __('Edit') }}</th>
+                            <th scope="col">{{ __('Delete') }}</th>
 
 
                         </tr>

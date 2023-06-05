@@ -15,8 +15,6 @@ Route::get('/events/events', [EventController::class, 'events'])
     ->name('events.events');
 Route::get('/events/workshop', [WorkshopController::class, 'workshops'])
     ->name('events.workshop');
-//Route::get('/events/create', [EventController::class, 'create'])
-//    ->name('events.create')->middleware('auth');
 Route::post('/events/store', [EventController::class, 'store'])
     ->name('events.store');
 
@@ -55,6 +53,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function(){
     Route::get('events', [\App\Http\Controllers\Admin\EventController::class, 'index'])->name('events.index'); // admin.index;
     Route::get('/events/create', [\App\Http\Controllers\Admin\EventController::class, 'create'])->name('events.create');
     Route::get('events/{event}', [\App\Http\Controllers\Admin\EventController::class, 'show'])->name('events.show');
+    Route::get('guests/{event}', [\App\Http\Controllers\Admin\EventController::class, 'guest'])->name('events.guest');
     Route::get('events/{id}/edit', [\App\Http\Controllers\Admin\EventController::class, 'edit'])->name('events.edit');
     Route::patch('events/{event}', [\App\Http\Controllers\Admin\EventController::class, 'update'])->name('events.update');
     Route::get('events/delete/{id}',[\App\Http\Controllers\Admin\EventController::class,'delete'])->name('events.delete');

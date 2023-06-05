@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title','ملتقى جامعة المجمعة الأول')
+@section('title','ملتقى جامعة المجمعة الأول الرئيسية')
 @section('content')
 
 

@@ -1,12 +1,6 @@
 
-
-
-
-
-
-
 @extends('layouts.main')
-@section('title','ورش العمل')
+@section('title','مشاهدة الزوار')
 @section('content')
 
     <div class="container">
@@ -21,8 +15,8 @@
 
 
                 <div class="alert alert-light" role="alert">
-                   بيانات الزوار المسجلين في <br>
-                  (  {{ $event->title}} )
+                    بيانات الزوار المسجلين في <br>
+                    (  {{ $event->title}} )
                 </div>
 
                 <div class="table-responsive">
@@ -30,9 +24,9 @@
                         <thead class="col">
                         <tr class="col">
                             <th scope="col"># </th>
-                            <th scope="col"> اسم الزائر </th>
-                            <th scope="col">رقم الجوال </th>
-                            <th scope="col">تصنيف الزائر</th>
+                            <th scope="col"> {{__('Visitor name')}} </th>
+                            <th scope="col">{{__('Mobile number')}} </th>
+                            <th scope="col">{{__('Visitor rating')}}</th>
 
 
 

@@ -11,18 +11,18 @@
         <div class="card-header col-auto">
 
 
-            <h3>البيانات المطلوبة لانشاء الفعالية</h3>
+            <h3>{{__('The data required to create the event')}}</h3>
 
 
         <form class="card-body" action="{{route('admin.events.store','$event')}} " method="post"  >
 @csrf
-            <label class="col-auto" for="title" >عنوان الفعالية:</label>
+            <label class="col-auto" for="title" >{{__('Title event')}}:</label>
 
             <input type="text" name="title"  id="title"><br>
         <select class="form-select" id="floatingSelectGrid" name="type" aria-label="Floating label select example">
 
-            <option value="event">لقائات عمل</option>
-            <option value="workshop">ورش عمل</option>
+            <option value="event">{{__('Work meetings')}}</option>
+            <option value="workshop">{{__('Workshop')}}</option>
         </select>
 
             @if(Session::has('success'))
@@ -37,15 +37,15 @@
             @endif
 
         <div class="form-floating">
-            <label class="col-auto" for="start_date" >تاريخ بداء الحدث:</label>
+            <label class="col-auto" for="start_date" >{{__('The start date of the event')}}:</label>
             <input type="date" class="form-control" id="start_date" name="start_date">
-            <label class="col-auto" for="end_date" >تاريخ انتهاء الحدث:</label>
+            <label class="col-auto" for="end_date" >{{__('The end date of the event')}}:</label>
             <input type="date" class="form-control" id="end_date" name="end_date">
-            <label class="col-auto" for="max_guests"> عدد الزوار المسموح للتسجيل</label>
+            <label class="col-auto" for="max_guests"> {{__('Number of guests allowed')}}</label>
             <input type="max_guests" class="form-control col-auto" name="max_guests">
 
 
-            <button class="btn btn-primary"  type="submit">تسجيل</button>
+            <button class="btn btn-primary"  type="submit">{{__('Register')}}</button>
 
 
         </div>

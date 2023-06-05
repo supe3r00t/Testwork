@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title','ورش العمل')
+@section('title','لقائات العمل')
 @section('content')
 
     <div class="container">
@@ -7,7 +7,7 @@
                     <div class="card-header col-auto">
 
 <div class="container">
-    <h1>لقائات العمل</h1>
+    <h1>{{__('Work meetings')}}</h1>
 
     <div class="table-responsive">
     <table class="table table-striped">
@@ -15,10 +15,10 @@
         <tr>
 
             <th scope="col"></th>
-            <th scope="col">انتقال للتسجيل</th>
-            <th scope="col">اسم الفعالية</th>
-            <th scope="col">تاريخ  ابتداء التسجيل</th>
-            <th scope="col">تاريخ انتهاء التسجيل</th>
+            <th scope="col">{{__('Transition to register')}}</th>
+            <th scope="col">{{__('Title event')}}</th>
+            <th scope="col">{{__('Registration start date')}}</th>
+            <th scope="col">{{__('Registration end date')}}</th>
 
 
         </tr>

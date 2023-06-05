@@ -13,17 +13,17 @@
     <div class="card" style="width: 25rem;">
         <div class="card-header col-auto">
 
-            <h3>لقاءات</h3>
+            <h3>{{__('Work meetings')}}</h3>
 
 
         </div>
 
 
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"> <h2>اسم لقاء:  {{$event->title}}</h2></li>
-            <li class="list-group-item"> تاريخ البداية:  {{$event->start_date}}</li>
-            <li class="list-group-item"> تاريخ النهاية:  {{$event->end_date}}</li>
-            <li class="list-group-item"> عدد الزوار المسموح به:  {{$event->max_guests}}</li>
+            <li class="list-group-item"> <h2>{{__('Meet name')}}:  {{$event->title}}</h2></li>
+            <li class="list-group-item"> {{__('The start date of the event')}}:  {{$event->start_date}}</li>
+            <li class="list-group-item"> {{__('The end date of the event')}}:  {{$event->end_date}}</li>
+            <li class="list-group-item"> {{__('Number of guests allowed')}}:  {{$event->max_guests}}</li>
 
         </ul>
 
@@ -35,15 +35,15 @@
                     @csrf
 
                     <div class="card-body" >
-                        <h5 class="card-title">بيانات المطلوبة للتسجيل</h5>
+                        <h5 class="card-title">{{__('Data required for registration')}}</h5>
 
 
 
                         <select class="form-select" id="floatingSelectGrid" name="title" aria-label="Floating label select example">
 
-                            <option  value="mr">طالب</option>
-                            <option value="mrs">طالبة</option>
-                            <option value="ms">عضو هيئة التدريس</option>
+                            <option  value="mr">{{__('Mr')}}</option>
+                            <option value="mrs">{{__('Mrs')}}</option>
+                            <option value="ms">{{__('Ms')}}</option>
                         </select>
 
 
@@ -55,15 +55,15 @@
 
 
                         <div class="form-floating">
-                            <label class="col-auto" for="floatingInputGrid" >الأسم</label>
+                            <label class="col-auto" for="floatingInputGrid" >{{__('Name')}}</label>
                             <input type="text" class="form-control" id="name" name="name">
-                            <label for="phone">الجوال</label>
+                            <label for="phone">{{__('Mobile number')}}</label>
                             <input type="tel" class="form-control" name="phone" id="phone">
 
-                            <button class="btn btn-primary" type="submit">تسجيل</button>
+                            <button class="btn btn-primary" type="submit">{{__('Register')}}</button>
 
                             @else
-                                <h1>التسجيل مغلق، انتهى العدد المسموح به</h1>
+                                <h1>{{__('Registration is closed, the allowed number has expired')}}</h1>
             @endif
                         </div>
 

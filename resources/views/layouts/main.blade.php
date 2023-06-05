@@ -14,7 +14,7 @@
 <link rel="icon" href="/sites/default/files/mu_logo_2.png" type="image/png" />
 <link rel="alternate" hreflang="en" href="https://www.mu.edu.sa/en" />
 <link rel="alternate" hreflang="ar" href="https://www.mu.edu.sa/ar" />
-    <title>الرئيسية | Majmaah University</title>
+    <title>@yield('title') | Majmaah University</title>
 <link rel="stylesheet" media="all" href="https://www.mu.edu.sa/sites/default/files/css/css_Sl4LRMNAKgKC73I4WttbKaFTfRNzrtOxiNi3J1AifR8.css" />
 <link rel="stylesheet" media="all" href="https://www.mu.edu.sa/modules/contrib/bootstrap_paragraphs/css/bootstrap-paragraphs-image.min.css?ruc2vs" />
 <link rel="stylesheet" media="all" href="https://www.mu.edu.sa/modules/contrib/bootstrap_paragraphs/css/bootstrap-paragraphs-carousel.min.css?ruc2vs" />
