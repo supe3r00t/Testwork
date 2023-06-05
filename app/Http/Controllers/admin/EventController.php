@@ -26,16 +26,36 @@ class EventController extends Controller
 
     }
     public function update(Event $event){
-        $event->update(request()->all()); // ['column' => 'value', 'column2' => 'value']
+        $event->update(request()->all());
         return redirect()->route('admin.events.index');
 
     }
-    public function create(){
-//        $event = Event::create(request()->all());
-//        return redirect()->route('admin.events.create',);
-//        return view('admin.events.create');
+    public function create(Event $event){
+
+        return view('admin.events.create');
     }
+
+    public function store(Request $request )
+    {
+
+        Event::create([
+
+            'title' => $request->title,
+            'type' => $request->type,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
+            'max_guests' => $request->max_guests,
+
+
+        ]);
+
+
+        return back()->with('success','تم ارسال الفعالية بنجاح!');
+
+    }
+
     public function show(Event $event){
+
         return view('admin.events.show', compact('event'));
     }
 
@@ -44,7 +64,6 @@ class EventController extends Controller
     {
 
         $event->delete();
-//        DB::table('events')->where('id', $event)->delete();
         return back();
     }
 

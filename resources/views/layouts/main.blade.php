@@ -161,7 +161,7 @@
                                     <ul class="links"><li hreflang="en" data-drupal-link-system-path="&lt;front&gt;"><a href="{{ route('admin.events.index') }}" class="language-link" hreflang="en" data-drupal-link-system-path="&lt;front&gt;">لوحة التحكم</a></li><li hreflang="ar" data-drupal-link-system-path="&lt;front&gt;" class="is-active"><a href="/ar" class="language-link is-active" hreflang="ar" data-drupal-link-system-path="&lt;front&gt;">عربي</a></li></ul>
                                 </div>
                                 <div class="language-switcher-language-url" id="block-languageswitcher" role="navigation">
-                                    <ul class="links"><li hreflang="en" data-drupal-link-system-path="&lt;front&gt;"><a href="{{ route('events.create') }}" class="language-link" hreflang="en" data-drupal-link-system-path="&lt;front&gt;">انشاء حدث</a></li><li hreflang="ar" data-drupal-link-system-path="&lt;front&gt;" class="is-active"><a href="/ar" class="language-link is-active" hreflang="ar" data-drupal-link-system-path="&lt;front&gt;">عربي</a></li></ul>
+                                    <ul class="links"><li hreflang="en" data-drupal-link-system-path="&lt;front&gt;"><a href="{{ route('admin.events.create') }}" class="language-link" hreflang="en" data-drupal-link-system-path="&lt;front&gt;">انشاء حدث</a></li><li hreflang="ar" data-drupal-link-system-path="&lt;front&gt;" class="is-active"><a href="/ar" class="language-link is-active" hreflang="ar" data-drupal-link-system-path="&lt;front&gt;">عربي</a></li></ul>
                                 </div>
 
                                 <form method="POST" action="{{ route('logout') }}">

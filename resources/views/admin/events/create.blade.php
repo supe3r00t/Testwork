@@ -14,7 +14,7 @@
             <h3>البيانات المطلوبة لانشاء الفعالية</h3>
 
 
-        <form class="card-body" action="{{route('events.store')}} " method="post"  >
+        <form class="card-body" action="{{route('admin.events.store','$event')}} " method="post"  >
 @csrf
             <label class="col-auto" for="title" >عنوان الفعالية:</label>
 
